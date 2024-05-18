@@ -1,0 +1,299 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    color: #333;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    max-width: 600px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    border-radius: 12px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 28px;
+    color: #333;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+main {
+    width: 100%;
+}
+
+.profile-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.profile-card:hover {
+    transform: translateY(-5px);
+}
+
+.profile-picture {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid #007bff;
+}
+
+.profile-card h2 {
+    font-size: 24px;
+    color: #007bff;
+    margin: 0 0 10px;
+}
+
+.profile-description {
+    font-size: 16px;
+    color: #666;
+    margin: 0;
+}
+
+.intime-outime-card {
+    display: flex;
+    justify-content: space-around;
+    background: #fff;
+    padding: 0px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.intime-outime-item {
+    flex: 1;
+    text-align: center;
+}
+
+.intime-outime-item h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.intime-outime-item p {
+    font-size: 16px;
+    color: #007bff;
+    margin: 0;
+    font-weight: bold;
+}
+
+
+.attendance-summary {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 90%;
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    border: 2px solid #007bff; /* Add border style */
+}
+
+.attendance-summary:hover {
+    transform: translateY(-5px);
+}
+
+.summary-item {
+    flex: 1;
+    min-width: 120px;
+    margin: 10px 0;
+}
+
+.summary-item h3 {
+    font-size: 18px;
+    color: #333;
+    margin: 0 0 10px;
+    position: relative;
+}
+
+.summary-item h3::after {
+    content: '';
+    width: 50%;
+    height: 2px;
+    background: #007bff;
+    position: absolute;
+    bottom: -5px;
+    left: 25%;
+}
+
+.summary-item p {
+    font-size: 16px;
+    color: #007bff;
+    margin: 0;
+    font-weight: bold;
+}
+
+.card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.button {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    flex: 1 1 auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.button:hover {
+    background: #0056b3;
+    transform: translateY(-2px);
+}
+
+.camera-button {
+    background: #28a745;
+    padding: 15px;
+}
+
+.camera-button:hover {
+    background: #218838;
+}
+
+.button-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.status-message {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333;
+}
+
+footer {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    .profile-card, .attendance-summary, .card {
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    .profile-card h2 {
+        font-size: 20px;
+    }
+
+    .profile-description, .summary-item h3, .summary-item p {
+        font-size: 14px;
+    }
+
+    .summary-item {
+        min-width: 100px;
+    }
+
+    .button-group {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .status-message {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 20px;
+    }
+
+    .profile-card, .attendance-summary, .card {
+        padding: 10px;
+        border-radius: 8px;
+    }
+
+    .profile-card h2 {
+        font-size: 18px;
+    }
+
+    .profile-description, .summary-item h3, .summary-item p {
+        font-size: 12px;
+    }
+
+    .summary-item {
+        min-width: 80px;
+    }
+
+    .button-group {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .button {
+        padding: 10px 15px;
+        font-size: 12px;
+    }
+
+    .status-message {
+        font-size: 14px;
+    }
+}
